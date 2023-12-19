@@ -1,0 +1,23 @@
+==========================================================
+INICIALIZAR REPO LOCAL Y CONECTARLO A REPO REMOTO (GITHUB)
+==========================================================
+
+En la terminal, dentro de la carpeta de mi proyecto ejecutar el siguiente comando para inicializar un repositorio local:
+    git init
+
+Si es la primera vez, configurar git:
+
+    git config --global user.email "miEmail@gmail.com"
+    git config --global user.name "mi nombre"
+
+Conectar el repositorio local con el repo de github
+
+    git remote add origin https://github.com/rmoreg/nombreRepo.git
+
+Volcar commits al repositorio remoto
+
+    git push origin <branch_name>
+
+Crear una nueva rama
+
+    git checkout -b <nombre_rama>
