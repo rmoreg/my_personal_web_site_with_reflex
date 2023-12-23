@@ -6,7 +6,6 @@ import time
 from my_personal_web_site_with_reflex import style
 from my_personal_web_site_with_reflex.main_page.main_page_view import MainPageView
 
-
 docs_url = "https://reflex.dev/docs/getting-started/introduction"
 filename = f"{config.app_name}/{config.app_name}.py"
 

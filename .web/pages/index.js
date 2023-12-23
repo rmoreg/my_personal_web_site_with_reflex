@@ -10,30 +10,7 @@ import NextHead from "next/head"
 
 
 
-export function Debounceinput_1764c75912cb8815d7251d2daf896920 () {
-  const state__state = useContext(StateContexts.state__state)
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_change_c1fe93b939c866e1de40fb642568d5e0 = useCallback((_e0) => addEvents([Event("state.state.set_question", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
-
-  return (
-    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_c1fe93b939c866e1de40fb642568d5e0} placeholder={`Ask a question`} sx={{"borderWidth": "1px", "padding": "1em", "boxShadow": "rgba(0, 0, 0, 0.15) 0px 2px 8px"}} type={`text`} value={state__state.question}/>
-  )
-}
-
-export function Button_30b920b53608c0a320eeb0f8c09e58d5 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_click_f4ecaeca7ac4803e870637fe18cb1eea = useCallback((_e) => addEvents([Event("state.state.answer", {})], (_e), {}), [addEvents, Event])
-
-  return (
-    <Button onClick={on_click_f4ecaeca7ac4803e870637fe18cb1eea} sx={{"bg": "#CEFFEE", "boxShadow": "rgba(0, 0, 0, 0.15) 0px 2px 8px"}}>
-  {`Ask`}
-</Button>
-  )
-}
-
-export function Box_5cb8b268ce53806495ab0fd1aa749243 () {
+export function Box_6aee04560ce6d1965b7e419c646a3337 () {
   const state__state = useContext(StateContexts.state__state)
 
 
@@ -57,6 +34,29 @@ export function Box_5cb8b268ce53806495ab0fd1aa749243 () {
   )
 }
 
+export function Debounceinput_1764c75912cb8815d7251d2daf896920 () {
+  const state__state = useContext(StateContexts.state__state)
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_change_c1fe93b939c866e1de40fb642568d5e0 = useCallback((_e0) => addEvents([Event("state.state.set_question", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
+
+  return (
+    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_c1fe93b939c866e1de40fb642568d5e0} placeholder={`Ask a question`} sx={{"borderWidth": "1px", "padding": "1em", "boxShadow": "rgba(0, 0, 0, 0.15) 0px 2px 8px"}} type={`text`} value={state__state.question}/>
+  )
+}
+
+export function Button_30b920b53608c0a320eeb0f8c09e58d5 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_click_f4ecaeca7ac4803e870637fe18cb1eea = useCallback((_e) => addEvents([Event("state.state.answer", {})], (_e), {}), [addEvents, Event])
+
+  return (
+    <Button onClick={on_click_f4ecaeca7ac4803e870637fe18cb1eea} sx={{"bg": "#CEFFEE", "boxShadow": "rgba(0, 0, 0, 0.15) 0px 2px 8px"}}>
+  {`Ask`}
+</Button>
+  )
+}
+
 export default function Component() {
 
   return (
@@ -66,7 +66,7 @@ export default function Component() {
   <Heading sx={{"textAlign": "center"}}>
   {`My chat`}
 </Heading>
-  <Box_5cb8b268ce53806495ab0fd1aa749243/>
+  <Box_6aee04560ce6d1965b7e419c646a3337/>
   <HStack>
   <Debounceinput_1764c75912cb8815d7251d2daf896920/>
   <Button_30b920b53608c0a320eeb0f8c09e58d5/>
