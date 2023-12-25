@@ -1,6 +1,8 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 from rxconfig import config
-
+from my_personal_web_site_with_reflex.custom_components.navbar import navbar
+from my_personal_web_site_with_reflex.views.header import header
+from my_personal_web_site_with_reflex.views.footer import footer
 import reflex as rx
 
 docs_url = "https://reflex.dev/docs/getting-started/introduction"
@@ -14,29 +16,14 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.fragment(
-        rx.color_mode_button(rx.color_mode_icon(), float="right"),
-        rx.vstack(
-            rx.heading("Raúl Moreno Ginés", font_size="2em"),
-            rx.box("Perfil personal", rx.code(filename, font_size="1em")),
-            rx.link(
-                "Check out our docs!",
-                href=docs_url,
-                border="0.1em solid",
-                padding="0.5em",
-                border_radius="0.5em",
-                _hover={
-                    "color": rx.color_mode_cond(
-                        light="rgb(107,99,246)",
-                        dark="rgb(179, 175, 255)",
-                    )
-                },
-            ),
-            spacing="1.5em",
-            font_size="2em",
-            padding_top="10%",
-        ),
-    )
+    return  rx.vstack(
+                navbar(),
+                header(),
+                rx.image(src="skyline_madrid.png"),
+                footer(),
+            )
+        
+
 
 
 # Add state and page to the app.
