@@ -29,4 +29,36 @@ header_box_style_1 = dict(
 
 styles["header_box_style_1"] = header_box_style_1
 
+# CV SECTIONS
+cv_section_style = dict(
+    padding="1em",
+    box_shadow=shadow,
+    width="95%",
+    #max_height = "5em",
+    bg = "#FDF5E6", # OldLace
+    # text_align = "left",
+    margin_y = "20em",
+)
+cv_title_style = dict(
+    font_family = "Georgia",
+    font_size = "1.2em",
+    # text_align = "left",
+    text_color = "#191970", #MidnightBlue
+    text_decoration = "underline",
+    width = "100%",
+    # as_ = "u",
+)
+cv_body_style = dict(
+    font_family = "Bookman",
+    font_size = "0.9em",
+    # text_align = "left",
+    text_color = "#2F4F4F", #DarkSlateGray
+    width = "100%",
+)
+
+styles["cv_section_style"] = cv_section_style
+styles["cv_title_style"] = cv_title_style
+styles["cv_body_style"] = cv_body_style
+
+
 

@@ -9,6 +9,6 @@ def footer() -> rx.Component:
         rx.text(f"{year}", color="#FFFAF0", text_align="right"),  
         bg = "#000080",
         width="100%",
-        bottom = "0",
+        # bottom = "0",
         padding = "1em"
     )
