@@ -4,6 +4,7 @@ from my_personal_web_site_with_reflex.custom_components.navbar import navbar
 from my_personal_web_site_with_reflex.views.header import header
 from my_personal_web_site_with_reflex.views.footer import footer
 from my_personal_web_site_with_reflex.custom_components.cv_sections.base_section import base_section
+from my_personal_web_site_with_reflex.custom_components.cv_sections.education_section import education_section
 import reflex as rx
 
 docs_url = "https://reflex.dev/docs/getting-started/introduction"
@@ -29,8 +30,14 @@ def index() -> rx.Component:
                 header(),
                 rx.image(src="skyline_madrid.png"),
                 base_section("PERSONAL PROFILE", personal_profile_body, "/icons/user-regular.svg"),
+                education_section(dates= ["2018-2021", "2014-2018", "2012-2014"], 
+                                  studies=["Masters Degree in Space Systems", "Bachelors Degree in Aerospace Engineering", "High School"],
+                                  places=["TECHNICAL UNIVERSITY OF MADRID", "TECHNICAL UNIVERSITY OF MADRID", "J.H. NEWMAN"],
+                                  icon_src="/icons/book-open-reader-solid.svg"
+                                  ),
+                rx.spacer(),
                 footer(),
-                spacing = "3em"
+                spacing = "1em"
             )
         
 
